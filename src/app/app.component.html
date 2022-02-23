@@ -5,5 +5,5 @@
 
 <img src="{{appimg}}" *ngIf="show"  width="{{iimgwid}}" alt="">
 
-<button class="btn" (click)="incrsize()">გაზრდა</button>
+<button class="btn" (click)="incrsize($event)" [ngStyle]="{color: color}">გაზრდა</button>
 <button class="btn" (click)="toggle()">გაქრობა/გამოჩენა</button>

@@ -15,11 +15,14 @@ export class AppComponent {
   }
 
   iimgwid:any = 50;
+  color = '';
 
   appimg = "/assets/img/imgs.png"
 
 
-  incrsize(){
+  incrsize(e:any){
+ //   e.target.style.color = "red"
+    this.color = "red";
    this.iimgwid += 50;
   }
 
