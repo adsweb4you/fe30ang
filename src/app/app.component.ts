@@ -6,5 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'fe30ang';
+ 
+  show = true;
+
+  appname = {
+    title:"ცვლადი",
+    age:25
+  }
+
+  iimgwid:any = 50;
+
+  appimg = "/assets/img/imgs.png"
+
+
+  incrsize(){
+   this.iimgwid += 50;
+  }
+
+  toggle(){
+    this.show = !this.show;
+  }
+
 }
