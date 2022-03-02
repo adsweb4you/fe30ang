@@ -1,7 +1,7 @@
-<header>
+<header [ngStyle]="{'background-image': 'url('+mytest+')'}">
     <app-nav [color]="homecolor" (testdata)="addItem($event)"> </app-nav>
 </header>
-{{mytest}}
+ 
 <div class="loader" *ngIf="loaded">
 
 </div>

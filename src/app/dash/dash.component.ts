@@ -9,7 +9,7 @@ export class DashComponent implements OnInit {
 
   loaded = true;
 
-  mytest = '';
+  mytest = 'https://images2.boardingschoolreview.com/photo/1122x864/1000/593/img-academy-oqxuxY.jpg';
 
   homecolor = "green"
 
