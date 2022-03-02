@@ -1,6 +1,69 @@
 
  <app-dash> </app-dash>
  
+
+ <div class="container">
+   <div class="col-lg-4 mx-auto">
+    <div class="card position-relative" [ngClass]="discount" [ngStyle]="style">
+
+    
+
+     <div class="discount" *ngIf="discs;else elseblog">
+         {{proc}}
+
+         {{disclacl(0)}}
+     </div>  
+
+      <ng-template #elseblog>
+      <div class="discount">
+         ფასდაკლების გარაშე
+      </div>    
+      </ng-template>
+
+      <img [src]="poster" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+       
+        <div [ngSwitch]="leng">
+          <a *ngSwitchCase="'ka'"  href="#" class="btn btn-primary">ქართული</a>
+          <a *ngSwitchCase="'en'"  href="#" class="btn btn-primary">ინგლისური</a>
+          <a *ngSwitchCase="'fr'"  href="#" class="btn btn-primary">ფრანგული</a>
+          <a *ngSwitchCase="'de'"  href="#" class="btn btn-primary">გერმანული</a>
+
+          <a *ngSwitchDefault>საწყისი</a>
+        </div>
+       
+        <select name="" [(ngModel)]="leng" class="form-control" id="">
+          <option *ngFor="let lng of langs" [ngValue]="lng">{{lng}}</option>
+        </select>
+        
+      </div>
+    </div>
+
+ 
+    <button [ngClass]="{ative: activeclass[0]}" class="btn btn-danger" (click)="changeprop('red', 'assets/img/img2.png', 0)">წითელი</button>
+    <button [ngClass]="{ative: activeclass[1]}" class="btn btn-primary" (click)="changeprop('blue', 'assets/img/img3.png', 1)">ლურჯი</button>
+    <button [ngClass]="{ative: activeclass[2]}" class="btn btn-success" (click)="changeprop('green', 'assets/img/img4.png', 2)">მწვანე</button>
+   </div>
+ </div>
+
+
+ <div class="container mt-5 mb-5">
+   <div class="row">
+     <div class="col-lg-4 mt-5" *ngFor="let User of Users; index as i ">
+      <div class="card border"  [ngClass]="{'border-primary': User.verify, 'border-danger':  !User.verify}">
+        <img [src]="User.avatar" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{User.name}}</h5>
+          <p class="card-text">ელ:ფოსტა : {{User.email}} {{i}}</p>
+          <a href="#" class="btn btn-primary">მისამართი {{ User.addre != undefined ? User.addre[User.basicaddr] : ''}} </a>
+        </div>
+      </div>
+     </div>
+   </div>
+ </div>
+
 <!-- <h1>
   {{ appname.title }} <br>
   {{ appname.age == 25 ? 'hello' : 'bb' }}
