@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormGroup,  FormControl , Validators} from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
@@ -134,6 +136,66 @@ export class AppComponent {
   },
 
  ]
+
+appcolor = ''
+ title = new FormControl('');
+
+ Registerform = new FormGroup({
+    name: new FormControl(''),
+    // email: new FormControl('', [Validators.email, ]),
+    // phone: new FormControl('', [Validators.pattern('[/@/gi]')]),
+    email: new FormControl(''),
+    phone: new FormControl(''),
+    body: new FormControl(''),
+    color : new FormControl(''),
+ })
+ 
+ check:any = [];
+
+ pushcolro(color:any){
+
+  let findedindex  = this.check.find((el:any)=>{
+    return el == color
+  })
+
+  let index = this.check.indexOf(findedindex)
+
+  
+  if (findedindex == undefined) {
+     this.check.push({colors:color})
+  }else{
+    this.check.splice(index, 1 )
+  }
+
+
+  
+  this.Registerform.patchValue({
+    color:  this.check
+  })
+
+  console.log(this.Registerform.value)
+
+ }
+
+ get name(){
+   return this.Registerform.get('name')
+ }
+
+ get email(){
+  return this.Registerform.get('email')
+}
+
+ cncolor(){
+   this.appcolor = this.title.value
+ }
+
+ update(){
+   this.title.setValue('sdfdsf')
+ }
+
+ formdata(){
+  console.log(this.Registerform.value)
+ }
 
  // color = ''
 //   show = true;

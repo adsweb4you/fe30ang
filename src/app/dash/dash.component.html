@@ -5,3 +5,28 @@
 <div class="loader" *ngIf="loaded">
 
 </div>
+
+<div class="container p-3 shadow rounded mb-5 mt-5">
+    <h1>პროდუქტი</h1>
+    <div class="row">
+      <div class="col-lg-4" *ngFor="let Product of Products; index as i">
+        <div class="card">
+            <img [src]="Product.gal[Product.poster]" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{Product.title}}</h5>
+               <h3>{{Product.calcprice}} ₾</h3>
+              <div class="flex">
+                  <button *ngFor="let wigh of Product.wight; index as w" (click)="sumprice(i, w)" class="btn m-1 btn-sm btn-warning">{{wigh}} გ</button>
+              </div>
+
+              <div class="flex">
+                <img *ngFor="let img of Product.gal; index as s" [ngClass]="{active: s == Product.poster}" (click)="changeimg(i, s)" class="w-50 p-3" [src]="img">
+            </div>
+           
+            </div>
+          </div>
+      </div>
+       
+
+    </div>
+</div>

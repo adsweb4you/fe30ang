@@ -1,4 +1,4 @@
-
+<section [ngStyle]="{'background-color': appcolor}">  
  <app-dash> </app-dash>
  
 
@@ -74,4 +74,64 @@
 <button class="btn" (click)="incrsize($event)" [ngStyle]="{color: color}">გაზრდა</button>
 <button class="btn" (click)="toggle()">გაქრობა/გამოჩენა</button> -->
 
+<div class="container">
+   <div class="col-lg-5 p-4 shadow mx-auto">
+     <input type="text" class="form-control" required [formControl]="title" (input)="cncolor()">
+      <small class="text-danger" *ngIf="title.touched && title.invalid">შეიყვანეთ ვალიდური ინფორმაცია</small>
+
+        <button class="btn btn-warning" (click)="update()">მნიშვნელობის მინიჭება</button>
+
+
+        <br>
+
+
+        <hr>
+
+      <form action="" [formGroup]="Registerform" (ngSubmit)="formdata()">
+
+        <div class="row">
+          <div class="col-lg-6 mb-3">
+            <input type="text" class="form-control"    formControlName="name">
+          </div>
+          <div class="col-lg-6 mb-3">
+            <input type="email" class="form-control"   formControlName="email">
+            <small class="text-danger" *ngIf="email && email.invalid">იმეილი არა ვალიდურია</small>
+ 
+          </div>
+          <div class="col-lg-12 mb-3">
+            <input type="text" class="form-control"    formControlName="phone">
+          </div>
+
+
+          <div class="col-lg-12 mb-3">
+            <input type="checkbox" class="form-controls"  (change)="pushcolro('red')"    >
+            წითელი
+            <hr>
+            <input type="checkbox" class="form-controls"   (change)="pushcolro('black')"   >
+            შავი
+            <hr>
+            <input type="checkbox" class="form-controls"  (change)="pushcolro('blue')"     >
+            ლურჯი
+            <hr>
+            <input type="checkbox" class="form-controls"  (change)="pushcolro('yellow')"     >
+            ყვითელი
+            <hr>
+          </div>
+
+          <div class="col-lg-12">
+            <textarea name="" id="" class="form-control" formControlName="body" cols="30" rows="10"></textarea>
+          </div>
+
+          <button class="btn btn-success"  type="submit" [disabled]="!Registerform.valid">გაგზავნა</button>
+
+        </div>
+
+
+
+      </form>
+
+   </div>
+</div>
+
 <app-footer></app-footer>
+</section>
