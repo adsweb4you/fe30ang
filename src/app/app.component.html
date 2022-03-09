@@ -2,7 +2,7 @@
  <app-dash> </app-dash>
  
 
- <div class="container">
+ <!-- <div class="container">
    <div class="col-lg-4 mx-auto">
     <div class="card position-relative" [ngClass]="discount" [ngStyle]="style">
 
@@ -72,7 +72,7 @@
 <img src="{{appimg}}" *ngIf="show"  width="{{iimgwid}}" alt="">
 
 <button class="btn" (click)="incrsize($event)" [ngStyle]="{color: color}">გაზრდა</button>
-<button class="btn" (click)="toggle()">გაქრობა/გამოჩენა</button> -->
+<button class="btn" (click)="toggle()">გაქრობა/გამოჩენა</button>  
 
 <div class="container">
    <div class="col-lg-5 p-4 shadow mx-auto">
@@ -131,7 +131,9 @@
       </form>
 
    </div>
-</div>
+</div> -->
+
+<router-outlet></router-outlet>
 
 <app-footer></app-footer>
 </section>

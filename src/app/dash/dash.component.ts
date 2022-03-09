@@ -11,7 +11,7 @@ export class DashComponent implements OnInit {
 
   mytest = 'https://images2.boardingschoolreview.com/photo/1122x864/1000/593/img-academy-oqxuxY.jpg';
 
-  homecolor = "green"
+  homecolor = "#000"
 
   constructor() { }
 

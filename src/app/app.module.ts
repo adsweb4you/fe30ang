@@ -8,6 +8,8 @@ import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashComponent } from './dash/dash.component';
 import { AboutComponent } from './about/about.component';
+import { ProductComponent } from './product/product.component';
+import { ProdDetalsComponent } from './prod-detals/prod-detals.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { AboutComponent } from './about/about.component';
     FooterComponent,
     DashComponent,
     AboutComponent,
+    ProductComponent,
+    ProdDetalsComponent,
   
   ],
   imports: [
