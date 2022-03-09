@@ -8,22 +8,32 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProdDetalsComponent implements OnInit {
   param = '';
+  active = '';
+  price = '';
   detalsprod:any = '';
   prod = [
     {
       id:2,
-      body:"asdas"
+      body:"asdas",
+      active:4
     }
   ]
 
   constructor(private route:ActivatedRoute) {
    this.param = this.route.snapshot.params.id;
    
+   this.route.params.forEach((els:any)=>{
+    this.active =  els.active;
+    this.price =  els.price
+ }) 
+
   this.detalsprod = this.prod.find((el:any)=>{
-    return el.id ==   this.param ;
+    return el.id  ==   this.param &&  el.active  ==   this.active;
   })
 
-    console.log(this.detalsprod )
+ 
+
+    console.log(this.active,  this.price);
 
    }
 

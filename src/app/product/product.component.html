@@ -1,6 +1,33 @@
-<h1 class="text-center">პრუდუქცია</h1>
+<!-- <h1 class="text-center">პრუდუქცია</h1> -->
 
-<a  [routerLink]="['/products/1']"   >გვერდი 1</a><br>
-<a  [routerLink]="['/products/2']"   >გვერდი 2</a><br>
-<a  [routerLink]="['/products/3']"   >გვერდი 3</a><br>
-<a  [routerLink]="['/products/4']"   >გვერდი 4</a>
+<!-- <a  [routerLink]="['/products/detals/1', {active:1, price:150}]"    >გვერდი 1</a><br>
+<a  [routerLink]="['/products/detals/2', {active:4, price:150}]"   >გვერდი 2</a><br>
+<a  [routerLink]="['/products/detals/3', {active:3, price:150}]"   >გვერდი 3</a><br>
+<a  [routerLink]="['/products/detals/4', {active:3, price:150}]"   >გვერდი 4</a> -->
+
+<div class="container p-5">
+    <div class="row">
+        <div class="col-lg-4">
+            <form action="" [formGroup]="Search" (change)="finds()">
+                <div class="row">
+                    <div class="col-lg-6">
+                         <input type="number" formControlName="price_from" class="form-control">
+                    </div>
+                    <div class="col-lg-6">
+                      
+                            <input type="number" formControlName="price_to" class="form-control">
+                    
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-8">
+           <div class="row">
+               <div class="col-lg-6" *ngFor="let Prod of filtered">
+                 <h1>{{Prod.name}}</h1>
+                 <p> {{Prod.price}}</p> 
+               </div>
+           </div>
+        </div>
+    </div>
+</div>
