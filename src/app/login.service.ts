@@ -1,11 +1,13 @@
-import { Injectable } from '@angular/core';
-
+import { Injectable , } from '@angular/core';
+// import { Http2ServerRequest } from 'http2';
+// import { addListener } from 'process';
+ import { HttpClient  } from  '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
  
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
 
   checkLogin(){
@@ -15,6 +17,10 @@ export class LoginService {
     }
 
     return false;
+  }
+
+  getdata(){
+    return this.http.get('http://localhost:4200/assets/data.json')
   }
 
 }
