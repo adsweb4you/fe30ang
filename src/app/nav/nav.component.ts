@@ -1,5 +1,5 @@
 import { Component, OnInit   , AfterContentInit ,   Output, EventEmitter ,  Input} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router , NavigationEnd  } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -12,10 +12,19 @@ export class NavComponent implements OnInit ,  AfterContentInit{
 
   constructor(
     private activeroutes:ActivatedRoute,
-
+    private router:Router
   ) {
 
- 
+    router.events.subscribe((ev)=>{
+       if (ev instanceof NavigationEnd ) {
+          let page = window.location.href.split('/')[3];
+          if (page == 'login') {
+               this.shownav = false
+          }else{
+            this.shownav = true
+          }
+       }
+    })
 
    }
   
@@ -29,11 +38,11 @@ export class NavComponent implements OnInit ,  AfterContentInit{
     if (pg == 'product') {
       this.shownav = false;
     }
-    console.log(pg)
+ 
   }
 
   ngAfterContentInit(){
-    console.log("asd")
+ 
   }
 
 
