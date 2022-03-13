@@ -23,6 +23,8 @@ export class ProductComponent implements OnInit {
     }
   ]
 
+ 
+
   constructor(
     private router:Router, 
     private activeroute:ActivatedRoute
@@ -42,8 +44,8 @@ export class ProductComponent implements OnInit {
  })
 
   ngOnInit(): void {
-    console.log(this.prfro, this.prto)
-    this.filt(this.prfro, this.prto );
+ 
+    this.filt(this.prfro, this.prto);
   }
 
   finds(){

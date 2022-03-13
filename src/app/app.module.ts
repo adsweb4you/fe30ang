@@ -10,6 +10,11 @@ import { DashComponent } from './dash/dash.component';
 import { AboutComponent } from './about/about.component';
 import { ProductComponent } from './product/product.component';
 import { ProdDetalsComponent } from './prod-detals/prod-detals.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { CommentsComponent } from './comments/comments.component';
+import { UserComponent } from './user/user.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +25,11 @@ import { ProdDetalsComponent } from './prod-detals/prod-detals.component';
     AboutComponent,
     ProductComponent,
     ProdDetalsComponent,
+    WelcomeComponent,
+    NotfoundComponent,
+    CommentsComponent,
+    UserComponent,
+    LoginComponent,
   
   ],
   imports: [
