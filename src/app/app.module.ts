@@ -15,6 +15,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { CommentsComponent } from './comments/comments.component';
 import { UserComponent } from './user/user.component';
 import { LoginComponent } from './login/login.component';
+import { PostsComponent } from './Post/posts/posts.component';
+import { PostDetalsComponent } from './Post/post-detals/post-detals.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { LoginComponent } from './login/login.component';
     CommentsComponent,
     UserComponent,
     LoginComponent,
+    PostsComponent,
+    PostDetalsComponent,
   
   ],
   imports: [

@@ -8,7 +8,19 @@ import { CommentsComponent } from './comments/comments.component';
 import { UserComponent } from './user/user.component';
 import {AuthGuard} from './auth.guard'
 import { LoginComponent } from './login/login.component';
+
+// posts
+import { PostsComponent } from './Post/posts/posts.component';
+import { PostDetalsComponent } from './Post/post-detals/post-detals.component';
+
 const routes: Routes = [
+
+  {
+    path:'Posts',
+    component:PostsComponent
+  },
+ 
+
   {
     path:'product',component:ProductComponent
   },

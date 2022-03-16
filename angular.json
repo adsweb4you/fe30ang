@@ -31,7 +31,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_mudules/bootstrap/dist/css/bootstrap.min.css",
+              "/node_modules/bpg-le-studio-02-caps/css/bpg-le-studio-02-caps.min.css"
             ],
             "scripts": []
           },
