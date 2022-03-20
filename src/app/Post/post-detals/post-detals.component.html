@@ -1,1 +1,23 @@
-<p>post-detals works!</p>
+<div class="container m-5  ">
+
+    <img [src]="Posts.poster" class="rounded col-lg-8  d-block shadow img-fluid" alt="">
+
+     <h1 class="mb-5   ">{{Posts.title}}</h1>
+
+     <p class="  ">{{Posts.body}}</p>
+
+     <hr>
+
+     <div class="comments">
+
+        <div class="card w-75" *ngFor="let Comme of Comments">
+            <div class="card-body">
+            
+              <p class="card-text">{{Comme.title}}</p>
+            
+            </div>
+          </div>
+
+     </div>
+
+</div>

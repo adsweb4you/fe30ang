@@ -17,7 +17,13 @@ import { UserComponent } from './user/user.component';
 import { LoginComponent } from './login/login.component';
 import { PostsComponent } from './Post/posts/posts.component';
 import { PostDetalsComponent } from './Post/post-detals/post-detals.component';
-
+import { LimitPipe } from './pipes/limit.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatButtonModule} from '@angular/material/button';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { CartComponent } from './cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +40,9 @@ import { PostDetalsComponent } from './Post/post-detals/post-detals.component';
     LoginComponent,
     PostsComponent,
     PostDetalsComponent,
+    LimitPipe,
+    CartComponent,
+ 
   
   ],
   imports: [
@@ -41,7 +50,12 @@ import { PostDetalsComponent } from './Post/post-detals/post-detals.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatButtonModule,
+    IvyCarouselModule,
+    NgxSliderModule,
   
   ],
   providers: [],

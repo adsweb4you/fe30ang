@@ -31,9 +31,11 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss",
               "node_mudules/bootstrap/dist/css/bootstrap.min.css",
-              "/node_modules/bpg-le-studio-02-caps/css/bpg-le-studio-02-caps.min.css"
+              "node_modules/bpg-le-studio-02-caps/css/bpg-le-studio-02-caps.min.css"
+              
             ],
             "scripts": []
           },
@@ -96,6 +98,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []

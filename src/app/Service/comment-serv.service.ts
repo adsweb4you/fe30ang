@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,12 @@ import { Injectable } from '@angular/core';
 })
 export class CommentServService {
 
-  constructor() { }
+  constructor(
+    private http:HttpClient
+  ) { }
+
+ GetComments(){
+   return this.http.get('/assets/server/Comments.json')
+ }
+
 }

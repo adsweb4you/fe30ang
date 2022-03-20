@@ -1,0 +1,24 @@
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#id</th>
+            <th scope="col">დასახელება</th>
+            <th scope="col">რაოდენობა</th>
+            <th scope="col">წაშლა</th>
+ 
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cart of Findepost; index as i">
+          
+            <th>{{cart.id}}</th>
+            <th>{{cart.title}}</th>
+            <td>{{cartt[i].count}}</td>
+            <td>Otto</td>
+ 
+          </tr>
+ 
+        </tbody>
+      </table>
+</div>
